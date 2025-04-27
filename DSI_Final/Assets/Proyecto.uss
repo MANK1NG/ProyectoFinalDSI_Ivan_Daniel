@@ -153,6 +153,7 @@
     width: 27%;
     -unity-background-scale-mode: scale-to-fit;
     background-color: rgba(198, 158, 228, 0);
+}
 .plantilla {
     background-color: rgb(146, 84, 193);
     border-left-color: rgb(81, 2, 142);
