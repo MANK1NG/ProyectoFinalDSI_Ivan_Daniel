@@ -17,7 +17,10 @@ public class UIManager : MonoBehaviour
     int paginasOjos = 3;
     int paginasArma = 2;
     int paginasBotas = 3;
+    int[] paginaActual;
 
+    Button btnFlechaAbajo;
+    Button btnFlechaArriba;
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -51,6 +54,18 @@ public class UIManager : MonoBehaviour
             elementA.RegisterCallback<ClickEvent>(seleccionAccesorio);
             indexA++;
         }
+
+         btnFlechaAbajo = root.Q<Button>("btnFlechaAbajo");
+         btnFlechaArriba = root.Q<Button>("btnFlechaArriba");
+
+        btnFlechaAbajo.clicked += PasarPaginaAbajo;
+        btnFlechaArriba.clicked += PasarPaginaArriba;
+
+        paginaActual = new int[4]; 
+        for (int i = 0; i < paginaActual.Length; i++)
+        {
+            paginaActual[i] = 1; 
+        }
     }
 
     void EstadoPanel(VisualElement ve, bool selec)
@@ -78,6 +93,7 @@ public class UIManager : MonoBehaviour
         EstadoPanel(panelAct, true);
 
         CargaPagina((int)panel.userData, 1);
+
     }
 
     void EstadoAccesorio(VisualElement ve, bool selec)
@@ -123,6 +139,12 @@ public class UIManager : MonoBehaviour
 
     void CargaPagina(int tipo, int pagina)
     {
+        int paginasTotales = GetPaginasTotales(tipo);
+        if (pagina < 1) pagina = 1;
+        if (pagina > paginasTotales) pagina = paginasTotales;
+
+        paginaActual[tipo] = pagina;
+
         string[] sprite = { pagina.ToString() + "_R", pagina.ToString() + "_A", pagina.ToString() + "_V" };
         int aux = 0;
         Accesorio historico;
@@ -151,5 +173,81 @@ public class UIManager : MonoBehaviour
                 EstadoAccesorio(element, true);
             aux++;
         }
+
+        ActualizarFlechas();
+    }
+
+
+    void ActualizarFlechas()
+    {
+        int tipo = (int)panelAct.userData;
+        int paginasTotales = GetPaginasTotales(tipo);
+
+        if (paginaActual[tipo] == 1)
+        {
+            btnFlechaArriba.style.display = DisplayStyle.None;
+        }
+        else
+        {
+            btnFlechaArriba.style.display = DisplayStyle.Flex;
+        }
+
+        if (paginaActual[tipo] == paginasTotales)
+        {
+            btnFlechaAbajo.style.display = DisplayStyle.None;
+        }
+        else
+        {
+            btnFlechaAbajo.style.display = DisplayStyle.Flex;
+        }
+
+    }
+
+    void PasarPaginaAbajo()
+    {
+        int tipo = (int)panelAct.userData;
+        int paginasTotales = GetPaginasTotales(tipo);
+
+        if (paginaActual[tipo] < paginasTotales)
+        {
+            paginaActual[tipo]++;
+            CargaPagina(tipo, paginaActual[tipo]);
+            ActualizarFlechas();
+        }
+    }
+
+    void PasarPaginaArriba()
+    {
+        int tipo = (int)panelAct.userData;
+
+        if (paginaActual[tipo] > 1)
+        {
+            paginaActual[tipo]--;
+            CargaPagina(tipo, paginaActual[tipo]);
+            ActualizarFlechas();
+        }
+    }
+
+    int GetPaginasTotales(int tipo)
+    {
+        int paginas = 1;
+
+        switch (tipo)
+        {
+            case 0:
+                paginas = paginasCasco;
+                break;
+            case 1:
+                paginas = paginasOjos;
+                break;
+            case 2:
+                paginas = paginasArma;
+                break;
+            case 3:
+                paginas = paginasBotas;
+                break;
+        }
+
+        return paginas;
     }
 }

@@ -259,3 +259,18 @@
     color: rgb(81, 2, 142);
     -unity-text-align: middle-center;
 }
+
+.btnFlecha:hover {
+    background-image: resource('Images/Iconos/Generales/BtnFlechaHover');
+    background-color: rgba(56, 56, 56, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.btnFlecha {
+    background-image: resource('Images/Iconos/Generales/BtnFlechaClick');
+    background-color: rgba(81, 5, 141, 0);
+    -unity-background-scale-mode: stretch-to-fill;
+}

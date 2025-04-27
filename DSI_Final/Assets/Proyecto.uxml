@@ -32,8 +32,12 @@
                             <ui:VisualElement name="Accesorio3" class="accesorio" style="margin-right: 25px; margin-left: 15px;" />
                         </ui:VisualElement>
                         <ui:VisualElement name="Flechas" style="flex-grow: 1; width: 19%;">
-                            <ui:VisualElement name="Arriba" style="flex-grow: 1;" />
-                            <ui:VisualElement name="Abajo" style="flex-grow: 1;" />
+                            <ui:VisualElement name="Arriba" style="flex-grow: 1; height: 50%; width: 100%; min-width: auto; min-height: auto;">
+                                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" view-data-key="btnFlechaArriba" name="btnFlechaArriba" class="btnFlecha" style="width: 50%; height: 50%; align-self: center; align-items: stretch; justify-content: center; translate: 0 50%; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="Abajo" style="flex-grow: 1; background-image: none; height: 50%; width: 100%;">
+                                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="btnFlechaAbajo" view-data-key="btnFlechaAbajo" class="btnFlecha" style="width: 50%; height: 50%; align-self: center; align-items: stretch; justify-content: center; translate: 0 50%; rotate: 180deg; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+                            </ui:VisualElement>
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement name="Generales" style="flex-grow: 1; height: 35%; flex-direction: row; align-items: flex-end; margin-left: 80px; margin-right: 80px;">
