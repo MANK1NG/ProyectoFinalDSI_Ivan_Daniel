@@ -153,6 +153,28 @@
     width: 27%;
     -unity-background-scale-mode: scale-to-fit;
     background-color: rgba(198, 158, 228, 0);
+.plantilla {
+    background-color: rgb(146, 84, 193);
+    border-left-color: rgb(81, 2, 142);
+    border-right-color: rgb(81, 2, 142);
+    border-top-color: rgb(81, 2, 142);
+    border-bottom-color: rgb(81, 2, 142);
+    border-top-width: 25px;
+    border-right-width: 25px;
+    border-bottom-width: 25px;
+    border-left-width: 25px;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+    border-bottom-right-radius: 55px;
+    border-bottom-left-radius: 55px;
+}
+
+.btnPlnt {
+    background-color: rgb(146, 84, 193);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -170,6 +192,23 @@
     width: 27%;
     -unity-background-scale-mode: scale-to-fit;
     background-color: rgba(198, 158, 228, 0);
+    border-left-color: rgb(81, 2, 142);
+    border-right-color: rgb(81, 2, 142);
+    border-top-color: rgb(81, 2, 142);
+    border-bottom-color: rgb(81, 2, 142);
+    -unity-font: resource('Typo/aAsianHiro');
+    -unity-font-definition: initial;
+    font-size: 32px;
+    color: rgb(81, 2, 142);
+    -unity-text-align: middle-center;
+}
+
+.btnPlnt:hover {
+    background-color: rgb(199, 158, 229);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -180,4 +219,13 @@
     -unity-slice-top: 0;
     -unity-slice-right: 0;
     -unity-slice-bottom: 0;
+    border-left-color: rgb(81, 2, 142);
+    border-right-color: rgb(81, 2, 142);
+    border-top-color: rgb(81, 2, 142);
+    border-bottom-color: rgb(81, 2, 142);
+    -unity-font: resource('Typo/aAsianHiro');
+    -unity-font-definition: initial;
+    font-size: 32px;
+    color: rgb(81, 2, 142);
+    -unity-text-align: middle-center;
 }
