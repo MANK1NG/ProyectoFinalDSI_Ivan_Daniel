@@ -9,8 +9,9 @@ public class UIManager : MonoBehaviour
     VisualElement panel;
     VisualElement accesorios;
     VisualElement panelAct;
-    bool accesorioActSel = false;
     VisualElement accesorioAct;
+
+    Personaje personaje;
 
     int paginasCasco = 3;
     int paginasOjos = 3;
@@ -22,6 +23,7 @@ public class UIManager : MonoBehaviour
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         panel = root.Q<VisualElement>("Generales");
         accesorios = root.Q<VisualElement>("Accesorios");
+        personaje = new Personaje(root.Q<VisualElement>("Personaje"));
 
         int indexP = 0;
         foreach (VisualElement elementP in panel.Children())
@@ -34,7 +36,18 @@ public class UIManager : MonoBehaviour
         int indexA = 0;
         foreach (VisualElement elementA in accesorios.Children())
         {
-            elementA.userData = indexA; // Guarda el índice
+            switch (indexA) // Guarda el color
+            {
+                case 0:
+                    elementA.userData = 'R';
+                    break;
+                case 1:
+                    elementA.userData = 'A';
+                    break;
+                case 2:
+                    elementA.userData = 'V';
+                    break;
+            }
             elementA.RegisterCallback<ClickEvent>(seleccionAccesorio);
             indexA++;
         }
@@ -88,32 +101,55 @@ public class UIManager : MonoBehaviour
             }
             else
             {
-                if (!accesorioActSel)
+                if (accesorioAct.resolvedStyle.backgroundColor.a == 0.0f)
                 {
                     EstadoAccesorio(accesorioAct, true);
-                    accesorioActSel = true;
+                    personaje.SetAccesorio((int)panelAct.userData, 1, (char)accesorioAct.userData);
                     return;
                 }
                 else
                 {
                     EstadoAccesorio(accesorioAct, false);
-                    accesorioActSel = false;
+                    personaje.SetAccesorio((int)panelAct.userData, 0, (char)accesorioAct.userData);
                     return;
                 }
             }
         }
 
         accesorioAct = accesorio;
-        accesorioActSel = true;
         EstadoAccesorio(accesorioAct, true);
+        personaje.SetAccesorio((int)panelAct.userData, 1, (char)accesorioAct.userData);
     }
 
     void CargaPagina(int tipo, int pagina)
     {
         string[] sprite = { pagina.ToString() + "_R", pagina.ToString() + "_A", pagina.ToString() + "_V" };
+        int aux = 0;
+        Accesorio historico;
+        switch (tipo)
+        {
+            case 0:
+                historico = personaje.casco;
+                break;
+            case 1:
+                historico = personaje.ojos;
+                break;
+            case 2:
+                historico = personaje.arma;
+                break;
+            default:
+                historico = personaje.botas;
+                break;
+        }
+
         foreach (VisualElement element in accesorios.Children())
         {
-            element.style.backgroundImage = new StyleBackground(ResourceLoad.GetIcono(sprite[(int)element.userData], tipo));
+            element.style.backgroundImage = new StyleBackground(ResourceLoad.GetIcono(sprite[aux], tipo));
+            if (historico.GetIndice() != 1 || historico.GetColor() != (char)sprite[aux][2])
+                EstadoAccesorio(element, false);
+            else
+                EstadoAccesorio(element, true);
+            aux++;
         }
     }
 }

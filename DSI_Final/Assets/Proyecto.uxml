@@ -13,11 +13,11 @@
             <ui:VisualElement name="SeccionCentro" style="flex-grow: 1; width: 65%; flex-basis: auto; flex-direction: column-reverse;">
                 <ui:VisualElement name="Plataforma" style="flex-grow: 1; background-image: resource(&apos;Images/Fondo/Plataforma&apos;); -unity-background-scale-mode: scale-to-fit; margin-left: 60px; justify-content: flex-end; translate: 0 22%;" />
                 <ui:VisualElement name="Personaje" style="flex-grow: 1;">
-                    <ui:VisualElement name="Personaje" style="flex-grow: 1; position: absolute; background-image: resource(&apos;Images/Personaje/Base&apos;); width: 102%; height: 169%; -unity-background-scale-mode: scale-to-fit; translate: 0 2%;" />
+                    <ui:VisualElement name="Base" style="flex-grow: 1; position: absolute; background-image: resource(&apos;Images/Personaje/Base&apos;); width: 102%; height: 169%; -unity-background-scale-mode: scale-to-fit; translate: 0 2%;" />
                     <ui:VisualElement name="Botas" style="flex-grow: 1; position: absolute; width: 102%; height: 169%; translate: 0 2%; -unity-background-scale-mode: scale-to-fit;" />
                     <ui:VisualElement name="Arma" style="flex-grow: 1; position: absolute; width: 102%; height: 169%; translate: 0 2%; -unity-background-scale-mode: scale-to-fit;" />
-                    <ui:VisualElement name="Casco" style="flex-grow: 1; position: absolute; width: 102%; height: 169%; translate: 0 2%; -unity-background-scale-mode: scale-to-fit;" />
                     <ui:VisualElement name="Ojos" style="flex-grow: 1; position: absolute; width: 102%; height: 169%; translate: 0 2%; -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:VisualElement name="Casco" style="flex-grow: 1; position: absolute; width: 102%; height: 169%; translate: 0 2%; -unity-background-scale-mode: scale-to-fit;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="SeccionDrch" style="flex-grow: 1; align-items: stretch; width: 90%;">

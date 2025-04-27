@@ -102,11 +102,14 @@ public class ResourceLoad : MonoBehaviour
 
     public static Sprite GetPersonajeAsset(string name)
     {
-        if (personajeAssets.TryGetValue("Images/Personaje/" + name, out var sprite))
+        string path = "Images/Personaje/" + name;
+        Sprite sprite = Resources.Load<Sprite>(path);
+        if (sprite != null)
         {
             return sprite;
         }
-        Debug.LogError($"Sprite '{name}' no cargado.");
+
+        Debug.LogError($"Sprite '{name}' no cargado en ruta: {path}");
         return null;
     }
 

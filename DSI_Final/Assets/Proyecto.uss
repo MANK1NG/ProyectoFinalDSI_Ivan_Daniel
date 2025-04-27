@@ -148,13 +148,6 @@
     flex-grow: 1;
 }
 
-.accesorio {
-    flex-grow: 1;
-    width: 27%;
-    -unity-background-scale-mode: scale-to-fit;
-    background-color: rgba(198, 158, 228, 0);
-}
-
 .plantilla {
     background-color: rgb(146, 84, 193);
     border-left-color: rgb(81, 2, 142);
@@ -197,6 +190,23 @@
     color: rgb(81, 2, 142);
 }
 
+.accesorio {
+    flex-grow: 1;
+    width: 27%;
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(198, 158, 228, 0);
+    -unity-slice-left: 15;
+    -unity-slice-top: 15;
+    -unity-slice-right: 15;
+    -unity-slice-bottom: 15;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .accesorio:hover {
     flex-grow: 1;
     width: 27%;
@@ -211,6 +221,16 @@
     font-size: 32px;
     color: rgb(81, 2, 142);
     -unity-text-align: middle-center;
+    -unity-slice-left: 5;
+    -unity-slice-top: 5;
+    -unity-slice-right: 5;
+    -unity-slice-bottom: 5;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .btnPlnt:hover {
