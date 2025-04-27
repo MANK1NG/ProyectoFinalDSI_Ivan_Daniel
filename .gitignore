@@ -30,3 +30,5 @@ MemoryCaptures/
 
 # VS Code
 .vscode/
+
+*.meta
