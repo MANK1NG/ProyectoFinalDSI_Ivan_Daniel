@@ -112,35 +112,31 @@ public class ResourceLoad : MonoBehaviour
 
     public static Sprite GetIcono(string name, int type)
     {
-        switch(type)
+        string path = "";
+
+        switch (type)
         {
-            case 0:
-                if (iconosCasco.TryGetValue("Images/Iconos/Accesorios/Casco" + name, out var spriteC))
-                {
-                    return spriteC;
-                }
+            case 0: // Casco
+                path = "Images/Iconos/Accesorios/Casco/" + name;
                 break;
-            case 1:
-                if (iconosCasco.TryGetValue("Images/Iconos/Accesorios/Ojos" + name, out var spriteO))
-                {
-                    return spriteO;
-                }
+            case 1: // Ojos
+                path = "Images/Iconos/Accesorios/Ojos/" + name;
                 break;
-            case 2:
-                if (iconosCasco.TryGetValue("Images/Iconos/Accesorios/Arma" + name, out var spriteA))
-                {
-                    return spriteA;
-                }
+            case 2: // Arma
+                path = "Images/Iconos/Accesorios/Arma/" + name;
                 break;
-            case 3:
-                if (iconosCasco.TryGetValue("Images/Iconos/Accesorios/Botas" + name, out var spriteB))
-                {
-                    return spriteB;
-                }
+            case 3: // Botas
+                path = "Images/Iconos/Accesorios/Botas/" + name;
                 break;
         }
-        
-        Debug.LogError($"Sprite '{name}' no cargado.");
+
+        Sprite sprite = Resources.Load<Sprite>(path);
+        if (sprite != null)
+        {
+            return sprite;
+        }
+
+        Debug.LogError($"Sprite '{name}' no cargado en ruta: {path}");
         return null;
     }
 }

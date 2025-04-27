@@ -6,23 +6,38 @@ using UnityEngine.UIElements;
 
 public class UIManager : MonoBehaviour
 {
-    List<VisualElement> panel;
-    List<VisualElement> accesorios;
+    VisualElement panel;
+    VisualElement accesorios;
     VisualElement panelAct;
     bool accesorioActSel = false;
     VisualElement accesorioAct;
 
+    int paginasCasco = 3;
+    int paginasOjos = 3;
+    int paginasArma = 2;
+    int paginasBotas = 3;
+
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
-        var panel = root.Q<VisualElement>("Generales");
-        var accesorios = root.Q<VisualElement>("Accesorios");
+        panel = root.Q<VisualElement>("Generales");
+        accesorios = root.Q<VisualElement>("Accesorios");
 
+        int indexP = 0;
         foreach (VisualElement elementP in panel.Children())
+        {
+            elementP.userData = indexP; // Guarda el índice
             elementP.RegisterCallback<ClickEvent>(seleccionPanel);
+            indexP++;
+        }
 
+        int indexA = 0;
         foreach (VisualElement elementA in accesorios.Children())
+        {
+            elementA.userData = indexA; // Guarda el índice
             elementA.RegisterCallback<ClickEvent>(seleccionAccesorio);
+            indexA++;
+        }
     }
 
     void EstadoPanel(VisualElement ve, bool selec)
@@ -48,6 +63,8 @@ public class UIManager : MonoBehaviour
 
         panelAct = panel;
         EstadoPanel(panelAct, true);
+
+        CargaPagina((int)panel.userData, 1);
     }
 
     void EstadoAccesorio(VisualElement ve, bool selec)
@@ -59,6 +76,8 @@ public class UIManager : MonoBehaviour
 
     void seleccionAccesorio(ClickEvent e)
     {
+        if (panelAct == null)
+            return;
         VisualElement accesorio = e.target as VisualElement;
 
         if (accesorioAct != null)
@@ -69,7 +88,7 @@ public class UIManager : MonoBehaviour
             }
             else
             {
-                if(!accesorioActSel)
+                if (!accesorioActSel)
                 {
                     EstadoAccesorio(accesorioAct, true);
                     accesorioActSel = true;
@@ -87,5 +106,14 @@ public class UIManager : MonoBehaviour
         accesorioAct = accesorio;
         accesorioActSel = true;
         EstadoAccesorio(accesorioAct, true);
+    }
+
+    void CargaPagina(int tipo, int pagina)
+    {
+        string[] sprite = { pagina.ToString() + "_R", pagina.ToString() + "_A", pagina.ToString() + "_V" };
+        foreach (VisualElement element in accesorios.Children())
+        {
+            element.style.backgroundImage = new StyleBackground(ResourceLoad.GetIcono(sprite[(int)element.userData], tipo));
+        }
     }
 }
