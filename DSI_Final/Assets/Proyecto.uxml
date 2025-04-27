@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Proyecto.uss?fileID=7433441132597879392&amp;guid=b4f00e4e7daf73449860eb0f63bfdb69&amp;type=3#Proyecto" />
+    <ui:VisualElement name="Global" style="flex-grow: 1; flex-direction: row; background-image: resource(&apos;Images/Fondo/Fondo&apos;);">
+        <ui:VisualElement name="SeccionIzq" style="flex-grow: 1; flex-direction: column; flex-wrap: nowrap; width: 11%; height: 100%; flex-basis: auto;">
+            <ui:VisualElement name="BtnArriba" style="flex-grow: 1; align-items: flex-start; width: 100%; height: 50%; flex-direction: row; display: flex; opacity: 1;">
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-image: url(&apos;project://database/Assets/Figma/BtnPersonaje.png?fileID=2800000&amp;guid=63b8d8d378aedf348b2d9a53d4ea6e79&amp;type=3#BtnPersonaje&apos;); align-items: auto; flex-direction: column; width: 100%; height: 100%; -unity-background-scale-mode: scale-to-fit; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; flex-wrap: nowrap; justify-content: flex-start; align-self: auto; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; padding-left: 0; background-color: rgb(0, 0, 0); -unity-slice-scale: 0;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="BtnAbajo" style="flex-grow: 1; width: 100%; height: 50%; display: flex;">
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-image: url(&apos;project://database/Assets/Figma/BtnHistorial.png?fileID=2800000&amp;guid=8072d0df4982439498de51651d3ae529&amp;type=3#BtnHistorial&apos;); width: 100%; height: 100%; -unity-background-scale-mode: scale-to-fit; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; background-color: rgb(0, 0, 0);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Pantalla1" style="flex-grow: 1; flex-wrap: nowrap; flex-direction: row; width: 89%;">
+            <ui:VisualElement name="SeccionCentro" style="flex-grow: 1; width: 65%; flex-basis: auto;" />
+            <ui:VisualElement name="SeccionDrch" style="flex-grow: 1; align-items: stretch; width: 90%;">
+                <ui:VisualElement name="CampoNombre" style="flex-grow: 0.5; min-width: initial; min-height: initial; height: 30%;">
+                    <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 71%; height: 72%; flex-direction: column; translate: 21% 16%; background-image: url(&apos;project://database/Assets/Figma/NOmbre.png?fileID=2800000&amp;guid=c7dbce06a5b21a24394a0955f2769804&amp;type=3#NOmbre&apos;); -unity-background-scale-mode: scale-to-fit;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Menu" style="flex-grow: 1; display: flex; height: 50%; flex-direction: column-reverse;">
+                    <ui:VisualElement name="Panel" style="flex-grow: 1; background-image: none; width: 88%; height: 65%; align-items: stretch; position: relative; display: flex; flex-direction: column-reverse; align-self: center; border-left-color: rgb(81, 5, 143); border-right-color: rgb(81, 5, 143); border-top-color: rgb(81, 5, 143); border-bottom-color: rgb(81, 5, 143); background-color: rgb(146, 84, 192); border-top-width: 25px; border-right-width: 25px; border-bottom-width: 25px; border-left-width: 25px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;" />
+                    <ui:VisualElement name="Generales" style="flex-grow: 1; height: 35%; flex-direction: row; align-items: flex-end; margin-left: 80px; margin-right: 80px;">
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Casco" class="btnPanel" style="background-image: resource(&apos;Images/Iconos/Generales/Casco&apos;);" />
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Ojos" class="btnPanel" style="background-image: resource(&apos;Images/Iconos/Generales/Ojos&apos;);" />
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Arma" class="btnPanel" style="background-image: resource(&apos;Images/Iconos/Generales/Arma&apos;); -unity-slice-left: 10; -unity-slice-top: 10; -unity-slice-right: 10; -unity-slice-bottom: 10;" />
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Botas" class="btnPanel" style="background-image: resource(&apos;Images/Iconos/Generales/Botas&apos;);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="BtnGuardar" style="flex-grow: 0.3; margin-right: 70px; justify-content: center; height: 20%;">
+                    <ui:Button text="Guardar" class="btn" style="width: 29%; height: 50%; align-self: flex-end;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,149 @@
+.btn {
+    background-image: none;
+    background-color: rgb(146, 84, 192);
+    border-left-color: rgb(81, 5, 143);
+    border-right-color: rgb(81, 5, 143);
+    border-top-color: rgb(81, 5, 143);
+    border-bottom-color: rgb(81, 5, 143);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+    -unity-text-align: lower-center;
+    -unity-font: resource('Typo/aAsianHiro');
+    -unity-font-definition: initial;
+    font-size: 54px;
+    color: rgb(81, 5, 143);
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.btn:hover {
+    background-image: none;
+    background-color: rgb(198, 158, 228);
+    border-left-color: rgb(146, 84, 192);
+    border-right-color: rgb(146, 84, 192);
+    border-top-color: rgb(146, 84, 192);
+    border-bottom-color: rgb(146, 84, 192);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+    -unity-text-align: lower-center;
+    -unity-font: resource('Typo/aAsianHiro');
+    -unity-font-definition: initial;
+    font-size: 54px;
+    color: rgb(146, 84, 192);
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.btn:active {
+    background-image: none;
+    background-color: rgb(198, 158, 228);
+    border-left-color: rgb(81, 5, 143);
+    border-right-color: rgb(81, 5, 143);
+    border-top-color: rgb(81, 5, 143);
+    border-bottom-color: rgb(81, 5, 143);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+    -unity-text-align: lower-center;
+    -unity-font: resource('Typo/aAsianHiro');
+    -unity-font-definition: initial;
+    font-size: 54px;
+    color: rgb(81, 5, 143);
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.btnPanel {
+    flex-grow: 1;
+    height: 93%;
+    width: 10%;
+    -unity-background-scale-mode: scale-to-fit;
+    translate: 0 15.3%;
+    background-color: rgb(146, 84, 192);
+    border-left-color: rgb(81, 5, 143);
+    border-right-color: rgb(81, 5, 143);
+    border-top-color: rgb(81, 5, 143);
+    border-bottom-color: rgb(81, 5, 143);
+    border-top-width: 25px;
+    border-right-width: 25px;
+    border-bottom-width: 25px;
+    border-left-width: 25px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 6px;
+    margin-left: 6px;
+    -unity-background-image-tint-color: rgb(142, 15, 190);
+}
+
+.btnPanel:hover {
+    flex-grow: 1;
+    height: 93%;
+    width: 10%;
+    -unity-background-scale-mode: scale-to-fit;
+    translate: 0 15.3%;
+    background-color: rgb(198, 158, 228);
+    border-left-color: rgb(81, 5, 143);
+    border-right-color: rgb(81, 5, 143);
+    border-top-color: rgb(81, 5, 143);
+    border-bottom-color: rgb(81, 5, 143);
+    border-top-width: 25px;
+    border-right-width: 25px;
+    border-bottom-width: 25px;
+    border-left-width: 25px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 6px;
+    margin-left: 6px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.btnPanelActive {
+    height: 93%;
+    width: 10%;
+    -unity-background-scale-mode: scale-to-fit;
+    translate: 0 15.4%;
+    background-color: rgb(146, 84, 192);
+    border-left-color: rgb(81, 5, 143);
+    border-right-color: rgb(81, 5, 143);
+    border-top-color: rgb(81, 5, 143);
+    border-bottom-color: rgb(81, 5, 143);
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 0;
+    border-left-width: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 6px;
+    margin-left: 6px;
+    -unity-background-image-tint-color: rgb(142, 15, 190);
+    flex-grow: 1;
+}

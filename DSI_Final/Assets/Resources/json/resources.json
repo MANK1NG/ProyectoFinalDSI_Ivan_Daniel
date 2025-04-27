@@ -1,0 +1,105 @@
+{
+    "listaPersonajeAssets": [
+      "Images/Personaje/C1_R",
+      "Images/Personaje/C1_A",
+      "Images/Personaje/C1_V",
+
+      "Images/Personaje/C2_R",
+      "Images/Personaje/C2_A",
+      "Images/Personaje/C2_V",
+
+      "Images/Personaje/C3_R",
+      "Images/Personaje/C3_A",
+      "Images/Personaje/C3_V",
+
+
+
+      "Images/Personaje/O1_R",
+      "Images/Personaje/O1_A",
+      "Images/Personaje/O1_V",
+
+      "Images/Personaje/O2_R",
+      "Images/Personaje/O2_A",
+      "Images/Personaje/O2_V",
+
+      "Images/Personaje/O3_R",
+      "Images/Personaje/O3_A",
+      "Images/Personaje/O3_V",
+
+
+
+      "Images/Personaje/A1_R",
+      "Images/Personaje/A1_A",
+      "Images/Personaje/A1_V",
+
+      "Images/Personaje/A2_R",
+      "Images/Personaje/A2_A",
+      "Images/Personaje/A2_V",
+
+
+
+      "Images/Personaje/B1_R",
+      "Images/Personaje/B1_A",
+      "Images/Personaje/B1_V",
+
+      "Images/Personaje/B2_R",
+      "Images/Personaje/B2_A",
+      "Images/Personaje/B2_V",
+
+      "Images/Personaje/B3_R",
+      "Images/Personaje/B3_A",
+      "Images/Personaje/B3_V"
+    ],
+
+    "listaIconosCasco": [
+      "Images/Iconos/Accesorios/Casco/1_R",
+      "Images/Iconos/Accesorios/Casco/1_A",
+      "Images/Iconos/Accesorios/Casco/1_V",
+
+      "Images/Iconos/Accesorios/Casco/2_R",
+      "Images/Iconos/Accesorios/Casco/2_A",
+      "Images/Iconos/Accesorios/Casco/2_V",
+
+      "Images/Iconos/Accesorios/Casco/3_R",
+      "Images/Iconos/Accesorios/Casco/3_A",
+      "Images/Iconos/Accesorios/Casco/3_V"
+    ],
+
+    "listaIconosOjos": [
+      "Images/Iconos/Accesorios/Ojos/1_R",
+      "Images/Iconos/Accesorios/Ojos/1_A",
+      "Images/Iconos/Accesorios/Ojos/1_V",
+
+      "Images/Iconos/Accesorios/Ojos/2_R",
+      "Images/Iconos/Accesorios/Ojos/2_A",
+      "Images/Iconos/Accesorios/Ojos/2_V",
+
+      "Images/Iconos/Accesorios/Ojos/3_R",
+      "Images/Iconos/Accesorios/Ojos/3_A",
+      "Images/Iconos/Accesorios/Ojos/3_V"
+    ],
+
+    "listaIconosArma": [
+      "Images/Iconos/Accesorios/Arma/1_R",
+      "Images/Iconos/Accesorios/Arma/1_A",
+      "Images/Iconos/Accesorios/Arma/1_V",
+
+      "Images/Iconos/Accesorios/Arma/2_R",
+      "Images/Iconos/Accesorios/Arma/2_A",
+      "Images/Iconos/Accesorios/Arma/2_V"
+    ],
+
+    "listaIconosBotas": [
+      "Images/Iconos/Accesorios/Botas/1_R",
+      "Images/Iconos/Accesorios/Botas/1_A",
+      "Images/Iconos/Accesorios/Botas/1_V",
+
+      "Images/Iconos/Accesorios/Botas/2_R",
+      "Images/Iconos/Accesorios/Botas/2_A",
+      "Images/Iconos/Accesorios/Botas/2_V",
+
+      "Images/Iconos/Accesorios/Botas/3_R",
+      "Images/Iconos/Accesorios/Botas/3_A",
+      "Images/Iconos/Accesorios/Botas/3_V"
+    ]
+  }
