@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Unity.VisualScripting.LudiqRootObjectEditor;
 using UnityEngine.UIElements;
+using System.Linq;
 
 public class UIManager : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class UIManager : MonoBehaviour
         personaje = new Personaje(root.Q<VisualElement>("Personaje"));
 
         int indexP = 0;
-        foreach (VisualElement elementP in panel.Children())
+        foreach (VisualElement elementP in panel.Children()) // Interactividad paneles
         {
             elementP.userData = indexP; // Guarda el índice
             elementP.RegisterCallback<ClickEvent>(seleccionPanel);
@@ -37,7 +38,7 @@ public class UIManager : MonoBehaviour
         }
 
         int indexA = 0;
-        foreach (VisualElement elementA in accesorios.Children())
+        foreach (VisualElement elementA in accesorios.Children()) // Interactividad accesorios
         {
             switch (indexA) // Guarda el color
             {
@@ -55,16 +56,20 @@ public class UIManager : MonoBehaviour
             indexA++;
         }
 
-         btnFlechaAbajo = root.Q<Button>("btnFlechaAbajo");
-         btnFlechaArriba = root.Q<Button>("btnFlechaArriba");
+        btnFlechaAbajo = root.Q<Button>("btnFlechaAbajo");
+        btnFlechaArriba = root.Q<Button>("btnFlechaArriba");
 
         btnFlechaAbajo.clicked += PasarPaginaAbajo;
         btnFlechaArriba.clicked += PasarPaginaArriba;
 
         paginaActual = new int[] { 1, 1, 1, 1 };
+
+        panelAct = panel.Children().First(); // Iniciamos con el primer panel seleccionado
+        EstadoPanel(panelAct, true);
+        CargaPagina(0, 1);
     }
 
-    void EstadoPanel(VisualElement ve, bool selec)
+    void EstadoPanel(VisualElement ve, bool selec) // Cambia el aspecto del panel en función de si está activo
     {
         string oldClass = "btnPanel";
         string newClass = oldClass;
@@ -81,18 +86,14 @@ public class UIManager : MonoBehaviour
     void seleccionPanel(ClickEvent e)
     {
         VisualElement panel = e.target as VisualElement;
-
-        if (panelAct != null)
-            EstadoPanel(panelAct, false);
-
+        EstadoPanel(panelAct, false);
         panelAct = panel;
         EstadoPanel(panelAct, true);
 
         CargaPagina((int)panel.userData, 1);
-
     }
 
-    void EstadoAccesorio(VisualElement ve, bool selec)
+    void EstadoAccesorio(VisualElement ve, bool selec) // Icono destacado de ser seleccionado
     {
         float alpha = selec ? 1.0f : 0.0f;
 
@@ -104,19 +105,20 @@ public class UIManager : MonoBehaviour
         if (panelAct == null)
             return;
         VisualElement accesorio = e.target as VisualElement;
+        int tipo = (int)panelAct.userData;
 
         if (accesorioAct != null)
         {
             if (accesorioAct != accesorio)
             {
-                EstadoAccesorio(accesorioAct, false);
+                EstadoAccesorio(accesorioAct, false); // Deseleccionamos icono anterior
             }
             else
             {
-                if (accesorioAct.resolvedStyle.backgroundColor.a == 0.0f)
+                if (accesorioAct.resolvedStyle.backgroundColor.a == 0.0f) // De ser el mismo, invertimos su estado
                 {
                     EstadoAccesorio(accesorioAct, true);
-                    personaje.SetAccesorio((int)panelAct.userData, 1, (char)accesorioAct.userData);
+                    personaje.SetAccesorio(tipo, paginaActual[tipo], (char)accesorioAct.userData);
                     return;
                 }
                 else
@@ -128,9 +130,9 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        accesorioAct = accesorio;
+        accesorioAct = accesorio; // Nuevo icono seleccionado
         EstadoAccesorio(accesorioAct, true);
-        personaje.SetAccesorio((int)panelAct.userData, 1, (char)accesorioAct.userData);
+        personaje.SetAccesorio(tipo, paginaActual[tipo], (char)accesorioAct.userData);
     }
 
     void CargaPagina(int tipo, int pagina)
@@ -163,7 +165,7 @@ public class UIManager : MonoBehaviour
         foreach (VisualElement element in accesorios.Children())
         {
             element.style.backgroundImage = new StyleBackground(ResourceLoad.GetIcono(sprite[aux], tipo));
-            if (historico.GetIndice() != 1 || historico.GetColor() != (char)sprite[aux][2])
+            if (historico.GetIndice() != paginaActual[tipo] || historico.GetColor() != (char)sprite[aux][2])
                 EstadoAccesorio(element, false);
             else
             {

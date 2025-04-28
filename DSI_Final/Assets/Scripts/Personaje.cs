@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 using static UnityEditor.Rendering.FilterWindow;
 using static UnityEngine.Rendering.DebugUI;
 
-public struct Accesorio
+public struct Accesorio // Cada elemento que defina al personaje se compone de un identificador y un color
 {
     int indice;
     char color;
@@ -39,7 +39,7 @@ public struct Accesorio
 
 public class Personaje
 {
-    public Accesorio casco;
+    public Accesorio casco; // Un identificador por elemento
     public Accesorio ojos;
     public Accesorio arma;
     public Accesorio botas;
@@ -61,7 +61,7 @@ public class Personaje
 
     public void SetAccesorio(int tipo, int indice, char color)
     {
-        if (indice == 0)
+        if (indice == 0) // Índice 0 significa que el accesorio en este tipo (casco, ojos, arma o botas) es nulo
         {
             personajeElementos[4 - tipo].style.backgroundImage = new StyleBackground();
             switch (tipo)
@@ -86,7 +86,7 @@ public class Personaje
 
         string ruta = "";
 
-        switch (tipo)
+        switch (tipo) // Sobreescribimos la información
         {
             case 0:
                 ruta += "C";
@@ -113,7 +113,7 @@ public class Personaje
         }
         ruta += indice + "_" + color;
 
-        personajeElementos[4-tipo].style.backgroundImage = new StyleBackground(ResourceLoad.GetPersonajeAsset(ruta));
+        personajeElementos[4-tipo].style.backgroundImage = new StyleBackground(ResourceLoad.GetPersonajeAsset(ruta)); // Cargamos la imagen
     }
 }
 
