@@ -61,11 +61,7 @@ public class UIManager : MonoBehaviour
         btnFlechaAbajo.clicked += PasarPaginaAbajo;
         btnFlechaArriba.clicked += PasarPaginaArriba;
 
-        paginaActual = new int[4]; 
-        for (int i = 0; i < paginaActual.Length; i++)
-        {
-            paginaActual[i] = 1; 
-        }
+        paginaActual = new int[] { 1, 1, 1, 1 };
     }
 
     void EstadoPanel(VisualElement ve, bool selec)
