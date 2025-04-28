@@ -22,6 +22,12 @@ public class UIManager : MonoBehaviour
 
     Button btnFlechaAbajo;
     Button btnFlechaArriba;
+
+    VisualElement panelPersonaje;
+    VisualElement panelHistorial;
+    Button btnPersonaje;
+    Button btnHistorial;
+
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -61,6 +67,17 @@ public class UIManager : MonoBehaviour
 
         btnFlechaAbajo.clicked += PasarPaginaAbajo;
         btnFlechaArriba.clicked += PasarPaginaArriba;
+
+
+        panelPersonaje = root.Q<VisualElement>("Pantalla1");
+        panelHistorial = root.Q<VisualElement>("Pantalla2");
+
+
+        btnHistorial = root.Q<Button>("BtnHistorial");
+        btnPersonaje = root.Q<Button>("BtnPersonaje");
+
+        btnPersonaje.clicked += MostrarPersonaje;
+        btnHistorial.clicked += MostrarHistorial;
 
         paginaActual = new int[] { 1, 1, 1, 1 };
 
@@ -250,5 +267,16 @@ public class UIManager : MonoBehaviour
         }
 
         return paginas;
+    }
+
+    void MostrarHistorial()
+    {
+        panelHistorial.style.display = DisplayStyle.Flex;
+        panelPersonaje.style.display = DisplayStyle.None;
+    }
+    void MostrarPersonaje()
+    {
+        panelPersonaje.style.display = DisplayStyle.Flex;
+        panelHistorial.style.display = DisplayStyle.None;
     }
 }
