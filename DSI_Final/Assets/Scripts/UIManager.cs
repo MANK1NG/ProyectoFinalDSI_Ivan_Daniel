@@ -170,7 +170,10 @@ public class UIManager : MonoBehaviour
             if (historico.GetIndice() != 1 || historico.GetColor() != (char)sprite[aux][2])
                 EstadoAccesorio(element, false);
             else
+            {
                 EstadoAccesorio(element, true);
+                accesorioAct = element;
+            }
             aux++;
         }
 
