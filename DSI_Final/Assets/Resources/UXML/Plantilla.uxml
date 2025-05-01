@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Proyecto.uss?fileID=7433441132597879392&amp;guid=b4f00e4e7daf73449860eb0f63bfdb69&amp;type=3#Proyecto" />
+    <Style src="project://database/Assets/Resources/USS/Proyecto.uss?fileID=7433441132597879392&amp;guid=b4f00e4e7daf73449860eb0f63bfdb69&amp;type=3#Proyecto" />
     <ui:VisualElement name="Plantilla" style="height: 100%; width: 100%; flex-shrink: 0; border-top-width: 25px; border-right-width: 25px; border-bottom-width: 25px; border-left-width: 25px; border-top-left-radius: 55px; border-top-right-radius: 55px; border-bottom-right-radius: 55px; border-bottom-left-radius: 55px; border-left-color: rgb(81, 2, 142); border-right-color: rgb(81, 2, 142); border-top-color: rgb(81, 2, 142); border-bottom-color: rgb(81, 2, 142); background-color: rgb(146, 84, 193);">
         <ui:VisualElement name="Personaje" style="flex-grow: 3; height: 60%; justify-content: center;">
             <ui:VisualElement name="Base" style="flex-grow: 1; position: absolute; background-image: resource(&apos;Images/Personaje/Base&apos;); width: 80%; height: 169%; -unity-background-scale-mode: scale-to-fit; translate: 0 5%; align-self: center;" />
@@ -9,7 +9,7 @@
             <ui:VisualElement name="Casco" style="flex-grow: 1; position: absolute; width: 80%; height: 169%; translate: 0 5%; -unity-background-scale-mode: scale-to-fit; align-self: center;" />
         </ui:VisualElement>
         <ui:VisualElement name="NombreVE" style="flex-grow: 1; height: 20%; justify-content: flex-end;">
-            <ui:Label tabindex="-1" name="Nombre" style="-unity-text-align: lower-center; color: rgb(255, 255, 255); -unity-font: resource(&apos;Typo/aAsianHiro&apos;); font-size: 30%; -unity-font-style: normal; -unity-font-definition: initial;" />
+            <ui:Label tabindex="-1" name="Nombre" style="-unity-text-align: lower-center; color: rgb(255, 255, 255); -unity-font: resource(&apos;Typo/aAsianHiro&apos;); font-size: 30%; -unity-font-style: normal; -unity-font-definition: initial; overflow: hidden;" />
         </ui:VisualElement>
         <ui:VisualElement name="BtnPlantilla" style="flex-grow: 1; flex-direction: row; height: 20%;">
             <ui:VisualElement name="BtnUsar" style="flex-grow: 1; align-self: center; justify-content: center; align-items: center; width: 50%; height: 50%;">
