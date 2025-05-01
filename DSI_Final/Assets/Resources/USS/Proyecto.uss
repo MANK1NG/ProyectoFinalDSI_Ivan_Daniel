@@ -149,19 +149,12 @@
 }
 
 .plantilla {
-    background-color: rgb(146, 84, 193);
-    border-left-color: rgb(81, 2, 142);
-    border-right-color: rgb(81, 2, 142);
-    border-top-color: rgb(81, 2, 142);
-    border-bottom-color: rgb(81, 2, 142);
-    border-top-width: 25px;
-    border-right-width: 25px;
-    border-bottom-width: 25px;
-    border-left-width: 25px;
-    border-top-left-radius: 55px;
-    border-top-right-radius: 55px;
-    border-bottom-right-radius: 55px;
-    border-bottom-left-radius: 55px;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    width: 20%;
+    height: 50%;
 }
 
 .btnPlnt {
@@ -180,7 +173,6 @@
     -unity-slice-top: 15;
     -unity-slice-right: 15;
     -unity-slice-bottom: 15;
-    font-size: 32px;
     -unity-font-definition: initial;
     -unity-font: resource('Typo/aAsianHiro');
     border-left-color: rgb(81, 4, 141);
@@ -255,9 +247,7 @@
     border-bottom-color: rgb(81, 2, 142);
     -unity-font: resource('Typo/aAsianHiro');
     -unity-font-definition: initial;
-    font-size: 32px;
     color: rgb(81, 2, 142);
-    -unity-text-align: middle-center;
 }
 
 .btnFlecha:hover {
@@ -273,4 +263,194 @@
     background-image: resource('Images/Iconos/Generales/BtnFlechaClick');
     background-color: rgba(81, 5, 141, 0);
     -unity-background-scale-mode: stretch-to-fill;
+}
+
+.btnAvatar {
+    background-image: resource('Images/Iconos/Generales/Avatar_Claro');
+    align-items: auto;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-self: auto;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    padding-left: 0;
+    background-color: rgb(81, 5, 143);
+    -unity-slice-scale: 0;
+}
+
+.btnAvatar:hover {
+    background-image: resource('Images/Iconos/Generales/Avatar_Claro');
+    align-items: auto;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-self: auto;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    padding-left: 0;
+    background-color: rgb(146, 84, 192);
+    -unity-slice-scale: 0;
+}
+
+.btnAvatarActive {
+    background-image: resource('Images/Iconos/Generales/Avatar_Oscuro');
+    align-items: auto;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-self: auto;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    padding-left: 0;
+    background-color: rgb(146, 84, 192);
+    -unity-slice-scale: 0;
+}
+
+.btnColeccion {
+    background-image: resource('Images/Iconos/Generales/Libro_Claro');
+    width: 100%;
+    height: 50%;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgb(81, 5, 143);
+    -unity-slice-left: 15;
+    -unity-slice-top: 15;
+    -unity-slice-right: 15;
+    -unity-slice-bottom: 15;
+}
+
+.btnColeccion:hover {
+    background-image: resource('Images/Iconos/Generales/Libro_Claro');
+    width: 100%;
+    height: 50%;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgb(146, 84, 192);
+    -unity-slice-left: 15;
+    -unity-slice-top: 15;
+    -unity-slice-right: 15;
+    -unity-slice-bottom: 15;
+}
+
+.btnColeccionActive {
+    background-image: resource('Images/Iconos/Generales/Libro_Oscuro');
+    width: 100%;
+    height: 50%;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgb(146, 84, 192);
+    -unity-slice-left: 15;
+    -unity-slice-top: 15;
+    -unity-slice-right: 15;
+    -unity-slice-bottom: 15;
+}
+
+TextField > TextInput {
+    background-color: rgba(0, 0, 0, 0);
 }

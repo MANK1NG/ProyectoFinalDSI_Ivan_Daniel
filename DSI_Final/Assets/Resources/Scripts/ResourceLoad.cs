@@ -108,8 +108,6 @@ public class ResourceLoad : MonoBehaviour
         {
             return sprite;
         }
-
-        Debug.LogError($"Sprite '{name}' no cargado en ruta: {path}");
         return null;
     }
 
